@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>MLBB Diamond Shop</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,"Myanmar Text",sans-serif;
+}
+
+body{
+    background:
+    radial-gradient(circle at top,#123b70 0%,#07152b 40%,#030914 100%);
+    color:white;
+    min-height:100vh;
+}
+
+.container{
+    width:92%;
+    max-width:520px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.header{
+    padding:20px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#55d9ff;
+    text-shadow:0 0 15px #00aaff;
+}
+
+.online{
+    background:#0b3027;
+    color:#49ffb0;
+    border:1px solid #20d990;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:12px;
+}
+
+/* HERO */
+
+.hero{
+    margin-top:8px;
+    padding:28px 20px;
+    border-radius:24px;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(0,170,255,.25),
+        rgba(30,20,100,.35)
+    );
+
+    border:1px solid rgba(80,200,255,.35);
+
+    box-shadow:
+    0 0 30px rgba(0,170,255,.15),
+    inset 0 0 30px rgba(0,170,255,.05);
+}
+
+.hero h1{
+    font-size:30px;
+    color:#fff;
+    text-shadow:
+    0 0 10px #00bfff,
+    0 0 25px #0077ff;
+}
+
+.hero p{
+    margin-top:10px;
+    color:#b8d9ef;
+    font-size:14px;
+}
+
+/* FEATURE */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    margin:15px 0;
+}
+
+.feature{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(100,200,255,.18);
+    padding:12px 5px;
+    border-radius:15px;
+    text-align:center;
+    font-size:12px;
+    color:#ccecff;
+}
+
+/* TITLE */
+
+.section-title{
+    margin:24px 0 12px;
+    font-size:20px;
+    font-weight:bold;
+    color:#65ddff;
+}
+
+/* PACKAGES */
+
+.packages{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.package{
+    padding:15px 10px;
+    border-radius:17px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(20,75,130,.5),
+        rgba(10,20,50,.7)
+    );
+
+    border:1px solid rgba(80,200,255,.25);
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.25);
+
+    transition:.2s;
+}
+
+.package:hover{
+    transform:translateY(-3px);
+    border-color:#00c8ff;
+    box-shadow:
+    0 0 18px rgba(0,200,255,.3);
+}
+
+.diamond{
+    font-size:17px;
+    font-weight:bold;
+    color:#7ce7ff;
+}
+
+.price{
+    margin-top:6px;
+    color:#fff;
+    font-size:14px;
+}
+
+.buy{
+    width:100%;
+    margin-top:11px;
+    padding:9px;
+
+    border:0;
+    border-radius:11px;
+
+    background:
+    linear-gradient(90deg,#00aaff,#635bff);
+
+    color:white;
+    font-weight:bold;
+
+    box-shadow:
+    0 0 12px rgba(0,170,255,.3);
+
+    cursor:pointer;
+}
+
+/* ORDER BOX */
+
+.order-box{
+    margin-top:25px;
+    padding:20px;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(20,50,100,.65),
+        rgba(5,15,35,.9)
+    );
+
+    border:1px solid rgba(80,200,255,.3);
+
+    box-shadow:
+    0 0 25px rgba(0,120,255,.12);
+}
+
+.input-group{
+    margin-top:14px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:7px;
+    color:#bceaff;
+    font-size:13px;
+}
+
+.input-group input,
+.input-group select{
+    width:100%;
+    padding:13px;
+
+    background:#07172d;
+    color:white;
+
+    border:1px solid #174b70;
+    border-radius:12px;
+
+    outline:none;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+    border-color:#00c8ff;
+    box-shadow:0 0 10px rgba(0,200,255,.2);
+}
+
+/* PAYMENT */
+
+.payment{
+    margin-top:18px;
+    padding:15px;
+
+    border-radius:15px;
+
+    background:rgba(0,170,255,.08);
+    border:1px solid rgba(0,200,255,.2);
+}
+
+.payment-title{
+    color:#66ddff;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.kpay{
+    display:flex;
+    gap:8px;
+}
+
+.kpay-number{
+    flex:1;
+    background:#061426;
+    border:1px solid #174b70;
+    padding:11px;
+    border-radius:10px;
+    color:#fff;
+}
+
+.copy-btn{
+    border:0;
+    border-radius:10px;
+    padding:0 14px;
+    background:#167cff;
+    color:white;
+    font-weight:bold;
+}
+
+/* TOTAL */
+
+.total{
+    margin-top:18px;
+    padding:16px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,160,255,.12),
+        rgba(100,70,255,.15)
+    );
+
+    border:1px solid rgba(100,200,255,.2);
+
+    font-size:20px;
+    font-weight:bold;
+    color:#67e5ff;
+
+    text-shadow:0 0 10px #008cff;
+}
+
+/* ORDER BUTTON */
+
+.order-btn{
+    width:100%;
+    margin-top:15px;
+    padding:15px;
+
+    border:0;
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #00aaff,
+        #6a4cff,
+        #00c8ff
+    );
+
+    background-size:200% 100%;
+
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+
+    box-shadow:
+    0 0 20px rgba(0,160,255,.35);
+
+    cursor:pointer;
+}
+
+.order-btn:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+}
+
+/* STATUS */
+
+.status{
+    display:none;
+    margin-top:13px;
+    padding:13px;
+
+    border-radius:12px;
+    text-align:center;
+    white-space:pre-line;
+    font-size:13px;
+}
+
+.success{
+    display:block;
+    background:#073d2c;
+    border:1px solid #16d99a;
+    color:#6fffc5;
+}
+
+.error{
+    display:block;
+    background:#421b24;
+    border:1px solid #ff4f70;
+    color:#ff9bad;
+}
+
+/* NOTE */
+
+.note{
+    margin-top:15px;
+    padding:12px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.04);
+
+    color:#9db8ca;
+    font-size:12px;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:25px 0;
+    color:#5d7890;
+    font-size:12px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:380px){
+
+    .hero h1{
+        font-size:25px;
+    }
+
+    .packages{
+        grid-template-columns:1fr 1fr;
+        gap:7px;
+    }
+
+    .package{
+        padding:12px 8px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <header class="header">
+
+        <div class="logo">
+            💎 MLBB SHOP
+        </div>
+
+        <div class="online">
+            ● ONLINE
+        </div>
+
+    </header>
+
+
+    <section class="hero">
+
+        <h1>💎 MLBB DIAMOND</h1>
+
+        <p>
+            မြန်မြန်ဆန်ဆန် • လွယ်လွယ်ကူကူ • ယုံကြည်စိတ်ချရ
+        </p>
+
+    </section>
+
+
+    <div class="features">
+
+        <div class="feature">
+            ⚡ Fast
+        </div>
+
+        <div class="feature">
+            🔒 Secure
+        </div>
+
+        <div class="feature">
+            📩 Auto Order
+        </div>
+
+    </div>
+
+
+    <div class="section-title">
+        💎 Diamond Packages
+    </div>
+
+
+    <div class="packages" id="packages"></div>
+
+
+    <div class="order-box" id="orderBox">
+
+        <div class="section-title">
+            🛒 Order တင်ရန်
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                👤 Player ID
+            </label>
+
+            <input
+                id="playerID"
+                type="text"
+                placeholder="Player ID ထည့်ပါ"
+            >
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                🌐 Server ID
+            </label>
+
+            <input
+                id="serverID"
+                type="text"
+                placeholder="Server ID ထည့်ပါ"
+            >
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                💎 Diamond Package
+            </label>
+
+            <select
+                id="package"
+                onchange="updateTotal()">
+
+                <option value="">
+                    💎 Package ရွေးပါ
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label>
+                📸 Payment Screenshot
+            </label>
+
+            <input
+                id="paymentScreenshot"
+                type="file"
+                accept="image/*"
+            >
+
+        </div>
+
+
+        <div class="payment">
+
+            <div class="payment-title">
+                💳 KPay Payment
+            </div>
+
+            <div class="kpay">
+
+                <div
+                    class="kpay-number"
+                    id="kpayNumber">
+
+                    09969636983
+
+                </div>
+
+                <button
+                    class="copy-btn"
+                    type="button"
+                    onclick="copyKPay()">
+
+                    COPY
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="total">
+
+            💰 Total
+            <span id="total">0 Ks</span>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="order-btn"
+            id="orderButton"
+            onclick="sendOrder()">
+
+            📩 ORDER တင်မယ်
+
+        </button>
+
+
+        <div
+            id="status"
+            class="status">
+        </div>
+
+
+        <div class="note">
+
+            ⚠️ Payment ပြုလုပ်ပြီးနောက်
+            Screenshot ကိုရွေးပေးပါ။<br>
+
+            ⚠️ Player ID / Server ID မှန်ကန်စွာ
+            ထည့်ပေးပါ။
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        © 2026 MLBB Diamond Shop
+    </div>
+
+</div>
+<script>
+
+/* =========================
+   DIAMOND PACKAGES
+========================= */
+
+const packages = [
+
+    ["55 Diamonds", 3800],
+    ["86 Diamonds", 5700],
+    ["110 Diamonds", 7300],
+    ["172 Diamonds", 11400],
+    ["202 Diamonds", 12300],
+    ["257 Diamonds", 15900],
+    ["275 Diamonds", 16800],
+    ["343 Diamonds", 21500],
+    ["404 Diamonds", 23900],
+    ["429 Diamonds", 25900],
+    ["514 Diamonds", 31500],
+    ["600 Diamonds", 35900],
+    ["706 Diamonds", 41900],
+    ["878 Diamonds", 52000],
+    ["963 Diamonds", 57300],
+    ["2157 Diamonds", 115000],
+    ["3489 Diamonds", 185000],
+    ["4314 Diamonds", 224000],
+    ["6471 Diamonds", 336000],
+    ["8628 Diamonds", 447000],
+    ["10785 Diamonds", 555000]
+
+];
+
+
+/* Package Cards */
+
+const packageBox =
+    document.getElementById("packages");
+
+const packageSelect =
+    document.getElementById("package");
+
+
+packages.forEach(function(item){
+
+    const name = item[0];
+    const price = item[1];
+
+
+    /* Card */
+
+    const card =
+        document.createElement("div");
+
+    card.className = "package";
+
+
+    card.innerHTML = `
+
+        <div class="diamond">
+            💎 ${name}
+        </div>
+
+        <div class="price">
+            ${price.toLocaleString()} Ks
+        </div>
+
+        <button
+            class="buy"
+            type="button"
+            onclick="choosePackage('${name}')">
+
+            BUY NOW
+
+        </button>
+
+    `;
+
+
+    packageBox.appendChild(card);
+
+
+    /* Select Option */
+
+    const option =
+        document.createElement("option");
+
+    option.value = name;
+
+    option.dataset.price = price;
+
+    option.textContent =
+        "💎 " +
+        name +
+        " — " +
+        price.toLocaleString() +
+        " Ks";
+
+
+    packageSelect.appendChild(option);
+
+});
+
+
+/* =========================
+   CHOOSE PACKAGE
+========================= */
+
+function choosePackage(name){
+
+    packageSelect.value = name;
+
+    updateTotal();
+
+    document
+        .getElementById("orderBox")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+
+function updateTotal(){
+
+    const selected =
+        packageSelect.options[
+            packageSelect.selectedIndex
+        ];
+
+
+    if(
+        !selected ||
+        !selected.dataset.price
+    ){
+
+        document.getElementById("total")
+            .innerText = "0 Ks";
+
+        return;
+    }
+
+
+    const price =
+        Number(selected.dataset.price);
+
+
+    document.getElementById("total")
+        .innerText =
+        price.toLocaleString() + " Ks";
+}
+
+
+/* =========================
+   KPAY COPY
+========================= */
+
+function copyKPay(){
+
+    const number =
+        document
+        .getElementById("kpayNumber")
+        .innerText
+        .trim();
+
+
+    navigator.clipboard
+        .writeText(number)
+        .then(function(){
+
+            alert(
+                "✅ KPay နံပါတ် Copy လုပ်ပြီးပါပြီ"
+            );
+
+        })
+        .catch(function(){
+
+            alert(
+                "❌ Copy မလုပ်နိုင်ပါ။ " +
+                "နံပါတ်ကို ကိုယ်တိုင် Copy လုပ်ပါ။"
+            );
+
+        });
+}
+
+
+/* =========================
+   SEND ORDER
+========================= */
+
+async function sendOrder(){
+
+    const button =
+        document.getElementById(
+            "orderButton"
+        );
+
+
+    const playerID =
+        document
+        .getElementById("playerID")
+        .value
+        .trim();
+
+
+    const serverID =
+        document
+        .getElementById("serverID")
+        .value
+        .trim();
+
+
+    const packageName =
+        packageSelect.value;
+
+
+    const screenshot =
+        document
+        .getElementById(
+            "paymentScreenshot"
+        )
+        .files[0];
+
+
+    const status =
+        document.getElementById(
+            "status"
+        );
+
+
+    /* Player ID */
+
+    if(playerID === ""){
+
+        status.className =
+            "status error";
+
+        status.innerText =
+            "❌ Player ID ထည့်ပေးပါ။";
+
+        status.style.display =
+            "block";
+
+        return;
+    }
+
+
+    /* Server ID */
+
+    if(serverID === ""){
+
+        status.className =
+            "status error";
+
+        status.innerText =
+            "❌ Server ID ထည့်ပေးပါ။";
+
+        status.style.display =
+            "block";
+
+        return;
+    }
+
+
+    /* Package */
+
+    if(packageName === ""){
+
+        status.className =
+            "status error";
+
+        status.innerText =
+            "❌ Diamond Package ရွေးပေးပါ။";
+
+        status.style.display =
+            "block";
+
+        return;
+    }
+
+
+    /* Screenshot */
+
+    if(!screenshot){
+
+        status.className =
+            "status error";
+
+        status.innerText =
+            "❌ Payment Screenshot ရွေးပေးပါ။";
+
+        status.style.display =
+            "block";
+
+        return;
+    }
+
+
+    /* Disable Button */
+
+    button.disabled = true;
+
+    button.innerText =
+        "⏳ ORDER ပို့နေပါတယ်...";
+
+
+    status.className =
+        "status";
+
+    status.innerText =
+        "⏳ Order + Screenshot ပို့နေပါတယ်...";
+
+    status.style.display =
+        "block";
+
+
+    try{
+
+        const formData =
+            new FormData();
+
+
+        formData.append(
+            "player_id",
+            playerID
+        );
+
+
+        formData.append(
+            "server_id",
+            serverID
+        );
+
+
+        formData.append(
+            "package",
+            packageName
+        );
+
+
+        formData.append(
+            "payment",
+            "KPay"
+        );
+
+
+        formData.append(
+            "payment_screenshot",
+            screenshot
+        );
+
+
+        const response =
+            await fetch(
+                "http://127.0.0.1:5000/order",
+                {
+                    method:"POST",
+                    body:formData
+                }
+            );
+
+
+        const result =
+            await response.json();
+
+
+        if(result.success){
+
+            status.className =
+                "status success";
+
+
+            status.innerText =
+                "✅ Order တင်ပြီးပါပြီ။\n" +
+                "📸 Screenshot ပါ Admin Telegram ဆီ ပို့ပြီးပါပြီ။";
+
+
+            button.disabled = true;
+
+            button.innerText =
+                "✅ ORDER တင်ပြီးပါပြီ";
+
+
+            document
+                .getElementById("playerID")
+                .value = "";
+
+
+            document
+                .getElementById("serverID")
+                .value = "";
+
+
+            packageSelect.value = "";
+
+
+            document
+                .getElementById(
+                    "paymentScreenshot"
+                )
+                .value = "";
+
+
+            updateTotal();
+
+        }
+
+        else{
+
+            status.className =
+                "status error";
+
+
+            status.innerText =
+                "❌ " +
+                (
+                    result.message ||
+                    "Order ပို့မရပါ။"
+                );
+
+
+            button.disabled = false;
+
+            button.innerText =
+                "📩 ORDER ပြန်တင်မယ်";
+        }
+
+
+    }
+
+    catch(error){
+
+        status.className =
+            "status error";
+
+
+        status.innerText =
+            "❌ Backend Server နဲ့ ချိတ်မရပါ။\n" +
+            "Termux မှာ bot.py ကို Run ထားပါ။";
+
+
+        button.disabled = false;
+
+        button.innerText =
+            "📩 ORDER ပြန်တင်မယ်";
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
