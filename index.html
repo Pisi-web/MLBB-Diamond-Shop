@@ -7,139 +7,317 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
-  font-family:Arial,"Noto Sans Myanmar",sans-serif;
-  background:
-  radial-gradient(circle at 10% 10%,#008cff22,transparent 30%),
-  radial-gradient(circle at 90% 20%,#ff3ca522,transparent 30%),
-  #080c15;
-  color:#fff;
-}
-.wrap{width:92%;max-width:900px;margin:auto}
-header{
-  padding:18px 0;
-  border-bottom:1px solid #ffffff12
-}
-.nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:900;font-size:19px}
-.logo span{color:#38bdf8}
-.tg{
-  background:#168eea;color:white;text-decoration:none;
-  padding:9px 14px;border-radius:9px;font-size:11px
+font-family:Arial,"Noto Sans Myanmar",sans-serif;
+background:
+radial-gradient(circle at 10% 10%,#008cff22,transparent 30%),
+radial-gradient(circle at 90% 20%,#ff3ca522,transparent 30%),
+#080c15;
+color:#fff;
 }
 
-.hero{text-align:center;padding:45px 5px 30px}
+.wrap{width:92%;max-width:900px;margin:auto}
+
+header{
+padding:18px 0;
+border-bottom:1px solid #ffffff12
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center
+}
+
+.logo{
+font-weight:900;
+font-size:19px
+}
+
+.logo span{color:#38bdf8}
+
+.tg{
+background:#168eea;
+color:#fff;
+text-decoration:none;
+padding:9px 14px;
+border-radius:9px;
+font-size:11px
+}
+
+.hero{
+text-align:center;
+padding:45px 5px 30px
+}
+
 .badge{
-  display:inline-block;padding:6px 11px;border-radius:20px;
-  border:1px solid #38bdf833;color:#55d4ff;
-  font-size:9px;margin-bottom:14px
+display:inline-block;
+padding:6px 11px;
+border-radius:20px;
+border:1px solid #38bdf833;
+color:#55d4ff;
+font-size:9px;
+margin-bottom:14px
 }
-.hero h1{font-size:34px;line-height:1.3}
+
+.hero h1{
+font-size:34px;
+line-height:1.3
+}
+
 .hero h1 span{
-  background:linear-gradient(90deg,#38bdf8,#c084fc,#ff4fa8);
-  -webkit-background-clip:text;color:transparent
+background:linear-gradient(90deg,#38bdf8,#c084fc,#ff4fa8);
+-webkit-background-clip:text;
+color:transparent
 }
-.hero p{color:#8e9aad;font-size:11px;margin-top:9px;line-height:1.7}
+
+.hero p{
+color:#8e9aad;
+font-size:11px;
+margin-top:9px;
+line-height:1.7
+}
 
 .features{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:10px;margin-bottom:35px
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+margin-bottom:35px
 }
-.feature{
-  background:#ffffff08;border:1px solid #ffffff0d;
-  border-radius:12px;padding:15px;text-align:center
-}
-.feature b{font-size:12px}
-.feature p{font-size:9px;color:#748094;margin-top:5px}
 
-.title{text-align:center;margin-bottom:16px}
+.feature{
+background:#ffffff08;
+border:1px solid #ffffff0d;
+border-radius:12px;
+padding:15px;
+text-align:center
+}
+
+.feature b{font-size:12px}
+
+.feature p{
+font-size:9px;
+color:#748094;
+margin-top:5px
+}
+
+.title{
+text-align:center;
+margin-bottom:16px
+}
+
 .title h2{font-size:20px}
-.title p{font-size:10px;color:#748094;margin-top:5px}
+
+.title p{
+font-size:10px;
+color:#748094;
+margin-top:5px
+}
 
 .packages{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:9px
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:9px
 }
+
 .package{
-  position:relative;background:#ffffff06;
-  border:1px solid #ffffff0d;border-radius:12px;
-  padding:13px
+position:relative;
+background:#ffffff06;
+border:1px solid #ffffff0d;
+border-radius:12px;
+padding:13px
 }
-.package h3{font-size:13px;margin:5px 0}
-.price{font-size:12px;color:#48caff;font-weight:bold}
+
+.package h3{
+font-size:13px;
+margin:5px 0
+}
+
+.price{
+font-size:12px;
+color:#48caff;
+font-weight:bold
+}
+
 .package button{
-  width:100%;border:0;border-radius:8px;
-  padding:9px;margin-top:10px;
-  color:white;font-weight:bold;font-size:10px;
-  background:linear-gradient(90deg,#008cff,#a855f7)
+width:100%;
+border:0;
+border-radius:8px;
+padding:9px;
+margin-top:10px;
+color:white;
+font-weight:bold;
+font-size:10px;
+background:linear-gradient(90deg,#008cff,#a855f7);
+cursor:pointer
 }
+
 .tag{
-  position:absolute;right:7px;top:7px;
-  background:#ff4fa822;color:#ff8ac5;
-  padding:3px 5px;border-radius:10px;font-size:7px
+position:absolute;
+right:7px;
+top:7px;
+background:#ff4fa822;
+color:#ff8ac5;
+padding:3px 5px;
+border-radius:10px;
+font-size:7px
 }
 
-.order{max-width:600px;margin:45px auto}
+.order{
+max-width:600px;
+margin:45px auto
+}
+
 .box{
-  background:#ffffff07;border:1px solid #ffffff10;
-  border-radius:16px;padding:20px
+background:#ffffff07;
+border:1px solid #ffffff10;
+border-radius:16px;
+padding:20px
 }
-.box h2{text-align:center;font-size:20px}
-.sub{text-align:center;color:#758196;font-size:10px;margin:5px 0 20px}
-.field{margin-bottom:13px}
-label{
-  display:block;color:#aeb8c8;font-size:10px;
-  margin-bottom:6px
-}
-input[type=text]{
-  width:100%;height:43px;border-radius:9px;
-  border:1px solid #ffffff12;background:#0c1220;
-  color:white;padding:0 12px;outline:none
-}
-input[type=text]:focus{border-color:#38bdf8}
 
-.kpay{
-  display:flex;justify-content:space-between;align-items:center;
-  background:#0c1722;border:1px solid #38bdf833;
-  border-radius:9px;padding:10px 12px
+.box h2{
+text-align:center;
+font-size:20px
 }
+
+.sub{
+text-align:center;
+color:#758196;
+font-size:10px;
+margin:5px 0 20px
+}
+
+.field{margin-bottom:13px}
+
+label{
+display:block;
+color:#aeb8c8;
+font-size:10px;
+margin-bottom:6px
+}
+
+input[type=text]{
+width:100%;
+height:43px;
+border-radius:9px;
+border:1px solid #ffffff12;
+background:#0c1220;
+color:white;
+padding:0 12px;
+outline:none
+}
+
+input[type=text]:focus{
+border-color:#38bdf8
+}
+
+/* KPay */
+.kpay{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0c1722;
+border:1px solid #38bdf833;
+border-radius:9px;
+padding:10px 12px
+}
+
 .kpay b{font-size:12px}
-.kpay span{display:block;color:#55cfff;font-size:11px;margin-top:3px}
+
+.kpay span{
+display:block;
+color:#55cfff;
+font-size:11px;
+margin-top:3px
+}
+
 .copy{
-  border:0;border-radius:7px;padding:8px 10px;
-  background:#168eea;color:white;font-size:9px
+border:0;
+border-radius:7px;
+padding:8px 10px;
+background:#168eea;
+color:white;
+font-size:9px;
+cursor:pointer
 }
 
 input[type=file]{
-  width:100%;padding:10px;
-  background:#0c1220;color:#9ba7b9;
-  border:1px solid #ffffff12;border-radius:9px;
-  font-size:10px
+width:100%;
+padding:10px;
+background:#0c1220;
+color:#9ba7b9;
+border:1px solid #ffffff12;
+border-radius:9px;
+font-size:10px
 }
 
 .submit{
-  width:100%;height:45px;border:0;border-radius:9px;
-  background:linear-gradient(90deg,#008cff,#a855f7,#ff4fa8);
-  color:white;font-weight:bold;font-size:12px;
-  margin-top:4px
+width:100%;
+height:45px;
+border:0;
+border-radius:9px;
+background:linear-gradient(90deg,#008cff,#a855f7,#ff4fa8);
+color:white;
+font-weight:bold;
+font-size:12px;
+margin-top:4px;
+cursor:pointer
 }
-.submit:disabled{opacity:.5}
-.status{text-align:center;font-size:10px;margin-top:10px;min-height:15px}
-.note{text-align:center;color:#667388;font-size:8px;line-height:1.7;margin-top:10px}
 
-.thanks{text-align:center;padding:35px 5px}
+.submit:disabled{opacity:.5}
+
+.status{
+text-align:center;
+font-size:10px;
+margin-top:10px;
+min-height:15px
+}
+
+.wait{
+text-align:center;
+margin-top:12px;
+padding:10px;
+border-radius:9px;
+background:#38bdf80d;
+border:1px solid #38bdf81c;
+color:#65d5ff;
+font-size:10px
+}
+
+.note{
+text-align:center;
+color:#667388;
+font-size:8px;
+line-height:1.7;
+margin-top:10px
+}
+
+.thanks{
+text-align:center;
+padding:35px 5px
+}
+
 .thanks h3{font-size:15px}
-.thanks p{color:#707d90;font-size:9px;margin-top:7px}
+
+.thanks p{
+color:#707d90;
+font-size:9px;
+margin-top:7px
+}
 
 footer{
-  text-align:center;padding:20px;
-  border-top:1px solid #ffffff0b;
-  color:#596577;font-size:8px
+text-align:center;
+padding:20px;
+border-top:1px solid #ffffff0b;
+color:#596577;
+font-size:8px
 }
 
 @media(max-width:650px){
-  .packages{grid-template-columns:repeat(2,1fr)}
-  .features{grid-template-columns:1fr}
-  .hero h1{font-size:28px}
+.packages{grid-template-columns:repeat(2,1fr)}
+.features{grid-template-columns:1fr}
+.hero h1{font-size:28px}
 }
 </style>
 </head>
@@ -148,194 +326,217 @@ footer{
 
 <header>
 <div class="wrap nav">
-  <div class="logo">PISI <span>DIAMOND SHOP</span></div>
-  <a class="tg" href="https://t.me/" target="_blank">Telegram</a>
+
+<div class="logo">
+PISI <span>DIAMOND SHOP</span>
+</div>
+
+<a class="tg" href="https://t.me/" target="_blank">
+Telegram
+</a>
+
 </div>
 </header>
+
 
 <main class="wrap">
 
 <section class="hero">
-  <div class="badge">PREMIUM MLBB DIAMOND SHOP</div>
 
-  <h1>
-    <span>Pisi Diamond Shop</span><br>
-    မှ ကြိုဆိုပါတယ်ရှင့်
-  </h1>
+<div class="badge">
+PREMIUM MLBB DIAMOND SHOP
+</div>
 
-  <p>
-    MLBB Diamond များကို လွယ်ကူမြန်ဆန်စွာ ဝယ်ယူနိုင်ပါပြီ။
-  </p>
+<h1>
+<span>Pisi Diamond Shop</span><br>
+မှ ကြိုဆိုပါတယ်ရှင့်
+</h1>
 
-  <p>
-    ဝယ်ယူအားပေးကြတဲ့ Customer များအား
-    အထူးကျေးဇူးတင်ပါတယ်ရှင့် ♡
-  </p>
+<p>
+MLBB Diamond များကို လွယ်ကူမြန်ဆန်စွာ ဝယ်ယူနိုင်ပါပြီ။
+</p>
+
+<p>
+ဝယ်ယူအားပေးကြတဲ့ Customer များအား
+အထူးကျေးဇူးတင်ပါတယ်ရှင့် ♡
+</p>
+
 </section>
+
 
 <section class="features">
-  <div class="feature">
-    ⚡<br><b>Fast Service</b>
-    <p>မြန်ဆန်စွာ ဆောင်ရွက်ပေးပါတယ်</p>
-  </div>
 
-  <div class="feature">
-    🔒<br><b>Secure Order</b>
-    <p>Order ကို သေချာစွာ စီမံပေးပါတယ်</p>
-  </div>
+<div class="feature">
+⚡<br>
+<b>Fast Service</b>
+<p>မြန်ဆန်စွာ ဆောင်ရွက်ပေးပါတယ်</p>
+</div>
 
-  <div class="feature">
-    💎<br><b>Easy Top Up</b>
-    <p>လွယ်ကူစွာ Order တင်နိုင်ပါတယ်</p>
-  </div>
+<div class="feature">
+🔒<br>
+<b>Secure Order</b>
+<p>Order ကို သေချာစွာ စီမံပေးပါတယ်</p>
+</div>
+
+<div class="feature">
+💎<br>
+<b>Easy Top Up</b>
+<p>လွယ်ကူစွာ Order တင်နိုင်ပါတယ်</p>
+</div>
+
 </section>
+
 
 <section>
+
 <div class="title">
-  <h2>💎 Diamond Packages</h2>
-  <p>ဝယ်ယူလိုသော Package ကို ရွေးပါ</p>
+<h2>💎 Diamond Packages</h2>
+<p>ဝယ်ယူလိုသော Package ကို ရွေးပါ</p>
 </div>
 
-<div class="packages">
+<div class="packages" id="packages"></div>
 
-<script>
-const packages=[
-["55","3,800"],["86","5,700"],["110","7,300"],
-["172","11,400"],["202","12,300"],["257","15,900"],
-["275","16,800"],["343","21,500"],["404","23,900"],
-["429","25,900"],["514","31,500"],["600","35,900"],
-["706","41,900"],["878","52,000"],["963","57,300"],
-["2157","115,000"],["3489","185,000"],["4314","224,000"],
-["6471","336,000"],["8628","447,000"],["10785","555,000"]
-];
-
-packages.forEach((p,i)=>{
-  let tag="";
-  if(i===2) tag='<span class="tag">POPULAR</span>';
-  if(i===5) tag='<span class="tag">BEST</span>';
-  if(i===15) tag='<span class="tag">VIP</span>';
-
-  document.write(`
-    <div class="package">
-      ${tag}
-      💎
-      <h3>${p[0]} Diamonds</h3>
-      <div class="price">${p[1]} Ks</div>
-      <button onclick="choosePackage('${p[0]} Diamonds - ${p[1]} Ks')">
-        ဝယ်မည်
-      </button>
-    </div>
-  `);
-});
-</script>
-
-</div>
 </section>
+
 
 <section class="order" id="order">
 
 <div class="box">
 
 <h2>💎 Order တင်ရန်</h2>
-<p class="sub">အချက်အလက်များကို မှန်ကန်စွာ ဖြည့်ပေးပါရှင့်</p>
+
+<p class="sub">
+အချက်အလက်များကို မှန်ကန်စွာ ဖြည့်ပေးပါရှင့်
+</p>
 
 <form id="orderForm">
 
 <div class="field">
 <label>👤 Player ID</label>
+
 <input
-  type="text"
-  id="player_id"
-  placeholder="ဥပမာ - 123456789"
-  required
->
+type="text"
+id="player_id"
+placeholder="ဥပမာ - 123456789"
+required>
 </div>
+
 
 <div class="field">
 <label>🌐 Server ID</label>
+
 <input
-  type="text"
-  id="server_id"
-  placeholder="ဥပမာ - 1234"
-  required
->
+type="text"
+id="server_id"
+placeholder="ဥပမာ - 1234"
+required>
 </div>
+
 
 <div class="field">
 <label>💎 Diamond Package</label>
+
 <input
-  type="text"
-  id="package"
-  placeholder="Package ရွေးပါ"
-  readonly
-  required
->
+type="text"
+id="package"
+placeholder="Package ရွေးပါ"
+readonly
+required>
 </div>
 
+
 <div class="field">
+
 <label>💳 ငွေလွှဲရန် KPay</label>
 
 <div class="kpay">
 
 <div>
 <b>💳 KPay</b>
-<span id="kpayNumber">09969636983</span>
+
+<span id="kpayNumber">
+09969636983
+</span>
 </div>
 
 <button
-  type="button"
-  class="copy"
-  onclick="copyKPay()"
->
+type="button"
+class="copy"
+onclick="copyKPay()">
 Copy
 </button>
 
 </div>
+
 </div>
+
 
 <div class="field">
-<label>📸 KPay ငွေလွှဲပြီး Screenshot တင်ပါ</label>
+
+<label>
+📸 KPay ငွေလွှဲပြီး Screenshot တင်ပါ
+</label>
 
 <input
-  type="file"
-  id="payment_screenshot"
-  accept="image/*"
-  required
->
+type="file"
+id="payment_screenshot"
+accept="image/*"
+required>
+
 </div>
 
+
 <button
-  type="submit"
-  class="submit"
-  id="submitBtn"
->
+type="submit"
+class="submit"
+id="submitBtn">
 💎 Order တင်မည်
 </button>
 
-<div class="status" id="status"></div>
+
+<div
+class="status"
+id="status">
+</div>
+
+
+<div class="wait">
+⏱️ Order ပြီးနောက် Wait 1min - 15min
+</div>
+
 
 <p class="note">
 KPay သို့ ငွေလွှဲပြီး Screenshot တင်ပေးပါ။<br>
-Player ID နှင့် Server ID ကိုလည်း မှန်ကန်စွာ စစ်ပေးပါ။
+Player ID နှင့် Server ID ကို မှန်ကန်စွာ စစ်ပေးပါ။
 </p>
 
 </form>
+
 </div>
+
 </section>
 
+
 <section class="thanks">
-<h3>♡ အားပေးမှုအတွက် ကျေးဇူးအထူးတင်ပါတယ် ♡</h3>
+
+<h3>
+♡ အားပေးမှုအတွက် ကျေးဇူးအထူးတင်ပါတယ် ♡
+</h3>
+
 <p>
 Pisi Diamond Shop ကို ဝယ်ယူအားပေးကြတဲ့
 Customer များအား အထူးကျေးဇူးတင်ပါတယ်ရှင့်။
 </p>
+
 </section>
 
 </main>
 
+
 <footer>
 © 2026 Pisi Diamond Shop
 </footer>
+
 
 <script>
 
@@ -343,145 +544,279 @@ const BACKEND_URL =
 "https://mlbb-shop-backend.onrender.com/order";
 
 
+/* DIAMOND PACKAGES */
+
+const packages=[
+["55","3,800"],
+["86","5,700"],
+["110","7,300"],
+["172","11,400"],
+["202","12,300"],
+["257","15,900"],
+["275","16,800"],
+["343","21,500"],
+["404","23,900"],
+["429","25,900"],
+["514","31,500"],
+["600","35,900"],
+["706","41,900"],
+["878","52,000"],
+["963","57,300"],
+["2157","115,000"],
+["3489","185,000"],
+["4314","224,000"],
+["6471","336,000"],
+["8628","447,000"],
+["10785","555,000"]
+];
+
+const packageBox =
+document.getElementById("packages");
+
+packages.forEach((p,i)=>{
+
+let tag="";
+
+if(i===2) tag='<span class="tag">POPULAR</span>';
+if(i===5) tag='<span class="tag">BEST</span>';
+if(i===15) tag='<span class="tag">VIP</span>';
+
+packageBox.innerHTML+=`
+
+<div class="package">
+
+${tag}
+
+💎
+
+<h3>
+${p[0]} Diamonds
+</h3>
+
+<div class="price">
+${p[1]} Ks
+</div>
+
+<button
+onclick="choosePackage('${p[0]} Diamonds - ${p[1]} Ks')">
+ဝယ်မည်
+</button>
+
+</div>
+
+`;
+
+});
+
+
+/* SELECT PACKAGE */
+
 function choosePackage(name){
 
-  document.getElementById("package").value=name;
+document.getElementById("package").value=name;
 
-  document.getElementById("order")
-  .scrollIntoView({
-    behavior:"smooth"
-  });
+document.getElementById("order")
+.scrollIntoView({
+behavior:"smooth"
+});
+
 }
 
+
+/* COPY KPAY */
 
 function copyKPay(){
 
-  const number =
-    document.getElementById("kpayNumber").textContent;
+const number=
+document.getElementById("kpayNumber").textContent.trim();
 
-  navigator.clipboard.writeText(number);
+navigator.clipboard.writeText(number);
 
-  alert("KPay ဖုန်းနံပါတ် Copy လုပ်ပြီးပါပြီ ✅");
+alert(
+"KPay ဖုန်းနံပါတ် Copy လုပ်ပြီးပါပြီ ✅"
+);
+
 }
 
+
+/* ORDER */
 
 document
 .getElementById("orderForm")
 .addEventListener("submit",async function(e){
 
-  e.preventDefault();
+e.preventDefault();
 
-  const playerId =
-    document.getElementById("player_id").value.trim();
+const playerId=
+document.getElementById("player_id")
+.value.trim();
 
-  const serverId =
-    document.getElementById("server_id").value.trim();
+const serverId=
+document.getElementById("server_id")
+.value.trim();
 
-  const packageName =
-    document.getElementById("package").value.trim();
+const packageName=
+document.getElementById("package")
+.value.trim();
 
-  const screenshot =
-    document.getElementById("payment_screenshot").files[0];
+const screenshot=
+document.getElementById("payment_screenshot")
+.files[0];
 
-  const status =
-    document.getElementById("status");
+const status=
+document.getElementById("status");
 
-  const button =
-    document.getElementById("submitBtn");
-
-
-  if(!playerId){
-    status.textContent="❌ Player ID ထည့်ပါ";
-    status.style.color="#ff6b81";
-    return;
-  }
-
-  if(!serverId){
-    status.textContent="❌ Server ID ထည့်ပါ";
-    status.style.color="#ff6b81";
-    return;
-  }
-
-  if(!packageName){
-    status.textContent="❌ Diamond Package ရွေးပါ";
-    status.style.color="#ff6b81";
-    return;
-  }
-
-  if(!screenshot){
-    status.textContent="❌ KPay Screenshot တင်ပါ";
-    status.style.color="#ff6b81";
-    return;
-  }
+const button=
+document.getElementById("submitBtn");
 
 
-  const data=new FormData();
+if(!playerId){
 
-  data.append("player_id",playerId);
-  data.append("server_id",serverId);
-  data.append("package",packageName);
+status.textContent=
+"❌ Player ID ထည့်ပါ";
 
-  /* KPay ONLY */
-  data.append("payment","KPay");
+status.style.color="#ff6b81";
 
-  data.append(
-    "payment_screenshot",
-    screenshot
-  );
+return;
+
+}
 
 
-  button.disabled=true;
-  button.textContent="⏳ Order ပို့နေပါတယ်...";
-  status.textContent="ခဏစောင့်ပေးပါရှင့်...";
-  status.style.color="#4ccaff";
+if(!serverId){
+
+status.textContent=
+"❌ Server ID ထည့်ပါ";
+
+status.style.color="#ff6b81";
+
+return;
+
+}
 
 
-  try{
+if(!packageName){
 
-    const response=
-      await fetch(BACKEND_URL,{
-        method:"POST",
-        body:data
-      });
+status.textContent=
+"❌ Diamond Package ရွေးပါ";
 
-    const result=
-      await response.json();
+status.style.color="#ff6b81";
 
+return;
 
-    if(response.ok && result.success){
-
-      status.textContent=
-        "✅ Order ပို့ပြီးပါပြီရှင့် 💎";
-
-      status.style.color="#55e69a";
-
-      document
-      .getElementById("orderForm")
-      .reset();
-
-    }else{
-
-      status.textContent=
-        "❌ "+(
-          result.message ||
-          "Order ပို့မရပါ"
-        );
-
-      status.style.color="#ff6b81";
-    }
-
-  }catch(error){
-
-    status.textContent=
-      "❌ Backend Server နဲ့ ချိတ်မရပါ";
-
-    status.style.color="#ff6b81";
-
-  }
+}
 
 
-  button.disabled=false;
-  button.textContent="💎 Order တင်မည်";
+if(!screenshot){
+
+status.textContent=
+"❌ KPay Screenshot တင်ပါ";
+
+status.style.color="#ff6b81";
+
+return;
+
+}
+
+
+/* FORM DATA */
+
+const data=new FormData();
+
+data.append(
+"player_id",
+playerId
+);
+
+data.append(
+"server_id",
+serverId
+);
+
+data.append(
+"package",
+packageName
+);
+
+
+/* KPay ONLY */
+
+data.append(
+"payment",
+"KPay"
+);
+
+data.append(
+"payment_screenshot",
+screenshot
+);
+
+
+/* SEND */
+
+button.disabled=true;
+
+button.textContent=
+"⏳ Order ပို့နေပါတယ်...";
+
+status.textContent=
+"ခဏစောင့်ပေးပါရှင့်...";
+
+status.style.color="#4ccaff";
+
+
+try{
+
+const response=
+await fetch(
+BACKEND_URL,
+{
+method:"POST",
+body:data
+}
+);
+
+const result=
+await response.json();
+
+
+if(response.ok && result.success){
+
+status.textContent=
+"✅ Order ပို့ပြီးပါပြီရှင့် 💎";
+
+status.style.color="#55e69a";
+
+document
+.getElementById("orderForm")
+.reset();
+
+}else{
+
+status.textContent=
+"❌ "+
+(
+result.message ||
+"Order ပို့မရပါ"
+);
+
+status.style.color="#ff6b81";
+
+}
+
+}catch(error){
+
+status.textContent=
+"❌ Backend Server နဲ့ ချိတ်မရပါ";
+
+status.style.color="#ff6b81";
+
+}
+
+
+button.disabled=false;
+
+button.textContent=
+"💎 Order တင်မည်";
 
 });
 
