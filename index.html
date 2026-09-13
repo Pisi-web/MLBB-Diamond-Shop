@@ -212,6 +212,38 @@ input[type=text]:focus{
 border-color:#38bdf8
 }
 
+.checkBtn{
+width:100%;
+height:43px;
+border:0;
+border-radius:9px;
+background:linear-gradient(90deg,#168eea,#38bdf8);
+color:white;
+font-weight:bold;
+font-size:11px;
+cursor:pointer
+}
+
+.checkBtn:disabled{
+opacity:.5;
+cursor:not-allowed
+}
+
+.playerInfo{
+display:none;
+margin-top:10px;
+padding:12px;
+border-radius:9px;
+background:#38bdf80d;
+border:1px solid #38bdf833;
+text-align:center;
+font-size:11px
+}
+
+.playerInfo b{
+color:#55d4ff
+}
+
 /* KPay */
 .kpay{
 display:flex;
@@ -338,7 +370,6 @@ Telegram
 </div>
 </header>
 
-
 <main class="wrap">
 
 <section class="hero">
@@ -363,7 +394,6 @@ MLBB Diamond များကို လွယ်ကူမြန်ဆန်စွ
 
 </section>
 
-
 <section class="features">
 
 <div class="feature">
@@ -386,7 +416,6 @@ MLBB Diamond များကို လွယ်ကူမြန်ဆန်စွ
 
 </section>
 
-
 <section>
 
 <div class="title">
@@ -397,7 +426,6 @@ MLBB Diamond များကို လွယ်ကူမြန်ဆန်စွ
 <div class="packages" id="packages"></div>
 
 </section>
-
 
 <section class="order" id="order">
 
@@ -412,6 +440,7 @@ MLBB Diamond များကို လွယ်ကူမြန်ဆန်စွ
 <form id="orderForm">
 
 <div class="field">
+
 <label>👤 Player ID</label>
 
 <input
@@ -419,10 +448,11 @@ type="text"
 id="player_id"
 placeholder="ဥပမာ - 123456789"
 required>
+
 </div>
 
-
 <div class="field">
+
 <label>🌐 Server ID</label>
 
 <input
@@ -430,10 +460,35 @@ type="text"
 id="server_id"
 placeholder="ဥပမာ - 1234"
 required>
+
 </div>
 
+<button
+type="button"
+class="checkBtn"
+id="checkPlayerBtn"
+onclick="checkPlayer()">
+
+🔍 Account စစ်မည်
+
+</button>
+
+<div
+class="playerInfo"
+id="playerInfo">
+
+👤 In-Game Name:
+<b id="playerName">-</b>
+
+</div>
+
+<div
+class="status"
+id="playerStatus">
+</div>
 
 <div class="field">
+
 <label>💎 Diamond Package</label>
 
 <input
@@ -442,8 +497,8 @@ id="package"
 placeholder="Package ရွေးပါ"
 readonly
 required>
-</div>
 
+</div>
 
 <div class="field">
 
@@ -463,13 +518,14 @@ required>
 type="button"
 class="copy"
 onclick="copyKPay()">
+
 Copy
+
 </button>
 
 </div>
 
 </div>
-
 
 <div class="field">
 
@@ -485,25 +541,24 @@ required>
 
 </div>
 
-
 <button
 type="submit"
 class="submit"
-id="submitBtn">
-💎 Order တင်မည်
-</button>
+id="submitBtn"
+disabled>
 
+💎 အရင် Account စစ်ပါ
+
+</button>
 
 <div
 class="status"
 id="status">
 </div>
 
-
 <div class="wait">
 ⏱️ Order ပြီးနောက် Wait 1min - 15min
 </div>
-
 
 <p class="note">
 KPay သို့ ငွေလွှဲပြီး Screenshot တင်ပေးပါ။<br>
@@ -515,7 +570,6 @@ Player ID နှင့် Server ID ကို မှန်ကန်စွာ စ
 </div>
 
 </section>
-
 
 <section class="thanks">
 
@@ -532,19 +586,29 @@ Customer များအား အထူးကျေးဇူးတင်ပါ�
 
 </main>
 
-
 <footer>
 © 2026 Pisi Diamond Shop
 </footer>
 
-
 <script>
 
+/* =========================
+   BACKEND URL
+========================= */
+
 const BACKEND_URL =
-"https://mlbb-shop-backend.onrender.com/order";
+"https://mlbb-shop-backend.onrender.com";
+
+const ORDER_URL =
+BACKEND_URL + "/order";
+
+const CHECK_PLAYER_URL =
+BACKEND_URL + "/check-player";
 
 
-/* DIAMOND PACKAGES */
+/* =========================
+   DIAMOND PACKAGES
+========================= */
 
 const packages=[
 ["55","3,800"],
@@ -577,9 +641,14 @@ packages.forEach((p,i)=>{
 
 let tag="";
 
-if(i===2) tag='<span class="tag">POPULAR</span>';
-if(i===5) tag='<span class="tag">BEST</span>';
-if(i===15) tag='<span class="tag">VIP</span>';
+if(i===2)
+tag='<span class="tag">POPULAR</span>';
+
+if(i===5)
+tag='<span class="tag">BEST</span>';
+
+if(i===15)
+tag='<span class="tag">VIP</span>';
 
 packageBox.innerHTML+=`
 
@@ -599,7 +668,9 @@ ${p[1]} Ks
 
 <button
 onclick="choosePackage('${p[0]} Diamonds - ${p[1]} Ks')">
+
 ဝယ်မည်
+
 </button>
 
 </div>
@@ -609,13 +680,16 @@ onclick="choosePackage('${p[0]} Diamonds - ${p[1]} Ks')">
 });
 
 
-/* SELECT PACKAGE */
+/* =========================
+   SELECT PACKAGE
+========================= */
 
 function choosePackage(name){
 
 document.getElementById("package").value=name;
 
-document.getElementById("order")
+document
+.getElementById("order")
 .scrollIntoView({
 behavior:"smooth"
 });
@@ -623,12 +697,181 @@ behavior:"smooth"
 }
 
 
-/* COPY KPAY */
+/* =========================
+   CHECK PLAYER
+========================= */
+
+async function checkPlayer(){
+
+const playerId =
+document.getElementById("player_id")
+.value.trim();
+
+const serverId =
+document.getElementById("server_id")
+.value.trim();
+
+const button =
+document.getElementById("checkPlayerBtn");
+
+const status =
+document.getElementById("playerStatus");
+
+const playerInfo =
+document.getElementById("playerInfo");
+
+const playerName =
+document.getElementById("playerName");
+
+const submitBtn =
+document.getElementById("submitBtn");
+
+
+if(!playerId){
+
+status.textContent =
+"❌ Player ID ထည့်ပါ";
+
+status.style.color =
+"#ff6b81";
+
+return;
+
+}
+
+
+if(!serverId){
+
+status.textContent =
+"❌ Server ID ထည့်ပါ";
+
+status.style.color =
+"#ff6b81";
+
+return;
+
+}
+
+
+button.disabled=true;
+
+button.textContent =
+"⏳ Account စစ်နေပါတယ်...";
+
+status.textContent =
+"ခဏစောင့်ပေးပါရှင့်...";
+
+status.style.color =
+"#4ccaff";
+
+playerInfo.style.display =
+"none";
+
+submitBtn.disabled=true;
+
+
+try{
+
+const data =
+new FormData();
+
+data.append(
+"player_id",
+playerId
+);
+
+data.append(
+"server_id",
+serverId
+);
+
+
+const response =
+await fetch(
+CHECK_PLAYER_URL,
+{
+method:"POST",
+body:data
+}
+);
+
+
+const result =
+await response.json();
+
+
+if(response.ok && result.success){
+
+playerName.textContent =
+result.name || "Unknown";
+
+playerInfo.style.display =
+"block";
+
+status.textContent =
+"✅ Account တွေ့ပါပြီ";
+
+status.style.color =
+"#55e69a";
+
+submitBtn.disabled=false;
+
+submitBtn.textContent =
+"💎 Order တင်မည်";
+
+}else{
+
+playerInfo.style.display =
+"none";
+
+status.textContent =
+"❌ " +
+(
+result.message ||
+"Account မတွေ့ပါ"
+);
+
+status.style.color =
+"#ff6b81";
+
+submitBtn.disabled=true;
+
+}
+
+}catch(error){
+
+console.error(error);
+
+status.textContent =
+"❌ Backend Server နဲ့ ချိတ်မရပါ";
+
+status.style.color =
+"#ff6b81";
+
+submitBtn.disabled=true;
+
+}
+
+
+button.disabled=false;
+
+button.textContent =
+"🔍 Account စစ်မည်";
+
+}
+
+
+/* =========================
+   COPY KPAY
+========================= */
 
 function copyKPay(){
 
-const number=
-document.getElementById("kpayNumber").textContent.trim();
+const number =
+document
+.getElementById("kpayNumber")
+.textContent
+.trim();
 
 navigator.clipboard.writeText(number);
 
@@ -639,43 +882,57 @@ alert(
 }
 
 
-/* ORDER */
+/* =========================
+   ORDER
+========================= */
 
 document
 .getElementById("orderForm")
-.addEventListener("submit",async function(e){
+.addEventListener(
+"submit",
+async function(e){
 
 e.preventDefault();
 
-const playerId=
-document.getElementById("player_id")
-.value.trim();
+const playerId =
+document
+.getElementById("player_id")
+.value
+.trim();
 
-const serverId=
-document.getElementById("server_id")
-.value.trim();
+const serverId =
+document
+.getElementById("server_id")
+.value
+.trim();
 
-const packageName=
-document.getElementById("package")
-.value.trim();
+const packageName =
+document
+.getElementById("package")
+.value
+.trim();
 
-const screenshot=
-document.getElementById("payment_screenshot")
+const screenshot =
+document
+.getElementById("payment_screenshot")
 .files[0];
 
-const status=
-document.getElementById("status");
+const status =
+document
+.getElementById("status");
 
-const button=
-document.getElementById("submitBtn");
+const button =
+document
+.getElementById("submitBtn");
 
 
 if(!playerId){
 
-status.textContent=
+status.textContent =
 "❌ Player ID ထည့်ပါ";
 
-status.style.color="#ff6b81";
+status.style.color =
+"#ff6b81";
 
 return;
 
@@ -684,10 +941,11 @@ return;
 
 if(!serverId){
 
-status.textContent=
+status.textContent =
 "❌ Server ID ထည့်ပါ";
 
-status.style.color="#ff6b81";
+status.style.color =
+"#ff6b81";
 
 return;
 
@@ -696,10 +954,11 @@ return;
 
 if(!packageName){
 
-status.textContent=
+status.textContent =
 "❌ Diamond Package ရွေးပါ";
 
-status.style.color="#ff6b81";
+status.style.color =
+"#ff6b81";
 
 return;
 
@@ -708,10 +967,11 @@ return;
 
 if(!screenshot){
 
-status.textContent=
+status.textContent =
 "❌ KPay Screenshot တင်ပါ";
 
-status.style.color="#ff6b81";
+status.style.color =
+"#ff6b81";
 
 return;
 
@@ -720,7 +980,8 @@ return;
 
 /* FORM DATA */
 
-const data=new FormData();
+const data =
+new FormData();
 
 data.append(
 "player_id",
@@ -737,9 +998,6 @@ data.append(
 packageName
 );
 
-
-/* KPay ONLY */
-
 data.append(
 "payment",
 "KPay"
@@ -755,67 +1013,95 @@ screenshot
 
 button.disabled=true;
 
-button.textContent=
+button.textContent =
 "⏳ Order ပို့နေပါတယ်...";
 
-status.textContent=
+status.textContent =
 "ခဏစောင့်ပေးပါရှင့်...";
 
-status.style.color="#4ccaff";
+status.style.color =
+"#4ccaff";
 
 
 try{
 
-const response=
+const response =
 await fetch(
-BACKEND_URL,
+ORDER_URL,
 {
 method:"POST",
 body:data
 }
 );
 
-const result=
+
+const result =
 await response.json();
 
 
 if(response.ok && result.success){
 
-status.textContent=
+status.textContent =
 "✅ Order ပို့ပြီးပါပြီရှင့် 💎";
 
-status.style.color="#55e69a";
+status.style.color =
+"#55e69a";
 
 document
 .getElementById("orderForm")
 .reset();
 
+document
+.getElementById("playerInfo")
+.style.display="none";
+
+document
+.getElementById("playerStatus")
+.textContent="";
+
+button.disabled=true;
+
+button.textContent =
+"💎 Account စစ်ပြီးမှ Order တင်ပါ";
+
 }else{
 
-status.textContent=
-"❌ "+
+status.textContent =
+"❌ " +
 (
 result.message ||
 "Order ပို့မရပါ"
 );
 
-status.style.color="#ff6b81";
+status.style.color =
+"#ff6b81";
 
 }
 
 }catch(error){
 
-status.textContent=
+console.error(error);
+
+status.textContent =
 "❌ Backend Server နဲ့ ချိတ်မရပါ";
 
-status.style.color="#ff6b81";
+status.style.color =
+"#ff6b81";
 
 }
 
 
+if(
+document
+.getElementById("playerInfo")
+.style.display !== "none"
+){
+
 button.disabled=false;
 
-button.textContent=
+}
+
+button.textContent =
 "💎 Order တင်မည်";
 
 });
