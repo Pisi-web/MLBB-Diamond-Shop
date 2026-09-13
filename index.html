@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="my">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1">
+
 <title>Pisi Diamond Shop</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
+}
 
 body{
 font-family:Arial,"Noto Sans Myanmar",sans-serif;
@@ -14,10 +25,14 @@ background:
 radial-gradient(circle at 10% 10%,#008cff22,transparent 30%),
 radial-gradient(circle at 90% 20%,#ff3ca522,transparent 30%),
 #080c15;
-color:#fff;
+color:#fff
 }
 
-.wrap{width:92%;max-width:900px;margin:auto}
+.wrap{
+width:92%;
+max-width:900px;
+margin:auto
+}
 
 header{
 padding:18px 0;
@@ -35,7 +50,9 @@ font-weight:900;
 font-size:19px
 }
 
-.logo span{color:#38bdf8}
+.logo span{
+color:#38bdf8
+}
 
 .tg{
 background:#168eea;
@@ -67,7 +84,12 @@ line-height:1.3
 }
 
 .hero h1 span{
-background:linear-gradient(90deg,#38bdf8,#c084fc,#ff4fa8);
+background:linear-gradient(
+90deg,
+#38bdf8,
+#c084fc,
+#ff4fa8
+);
 -webkit-background-clip:text;
 color:transparent
 }
@@ -81,7 +103,8 @@ line-height:1.7
 
 .features{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:
+repeat(3,1fr);
 gap:10px;
 margin-bottom:35px
 }
@@ -94,7 +117,9 @@ padding:15px;
 text-align:center
 }
 
-.feature b{font-size:12px}
+.feature b{
+font-size:12px
+}
 
 .feature p{
 font-size:9px;
@@ -107,7 +132,9 @@ text-align:center;
 margin-bottom:16px
 }
 
-.title h2{font-size:20px}
+.title h2{
+font-size:20px
+}
 
 .title p{
 font-size:10px;
@@ -117,7 +144,8 @@ margin-top:5px
 
 .packages{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:
+repeat(3,1fr);
 gap:9px
 }
 
@@ -149,7 +177,12 @@ margin-top:10px;
 color:white;
 font-weight:bold;
 font-size:10px;
-background:linear-gradient(90deg,#008cff,#a855f7);
+background:
+linear-gradient(
+90deg,
+#008cff,
+#a855f7
+);
 cursor:pointer
 }
 
@@ -188,7 +221,9 @@ font-size:10px;
 margin:5px 0 20px
 }
 
-.field{margin-bottom:13px}
+.field{
+margin-bottom:13px
+}
 
 label{
 display:block;
@@ -217,7 +252,12 @@ width:100%;
 height:43px;
 border:0;
 border-radius:9px;
-background:linear-gradient(90deg,#168eea,#38bdf8);
+background:
+linear-gradient(
+90deg,
+#168eea,
+#38bdf8
+);
 color:white;
 font-weight:bold;
 font-size:11px;
@@ -244,7 +284,6 @@ font-size:11px
 color:#55d4ff
 }
 
-/* KPay */
 .kpay{
 display:flex;
 justify-content:space-between;
@@ -255,7 +294,9 @@ border-radius:9px;
 padding:10px 12px
 }
 
-.kpay b{font-size:12px}
+.kpay b{
+font-size:12px
+}
 
 .kpay span{
 display:block;
@@ -289,7 +330,13 @@ width:100%;
 height:45px;
 border:0;
 border-radius:9px;
-background:linear-gradient(90deg,#008cff,#a855f7,#ff4fa8);
+background:
+linear-gradient(
+90deg,
+#008cff,
+#a855f7,
+#ff4fa8
+);
 color:white;
 font-weight:bold;
 font-size:12px;
@@ -297,7 +344,9 @@ margin-top:4px;
 cursor:pointer
 }
 
-.submit:disabled{opacity:.5}
+.submit:disabled{
+opacity:.5
+}
 
 .status{
 text-align:center;
@@ -317,6 +366,28 @@ color:#65d5ff;
 font-size:10px
 }
 
+.successBox{
+display:none;
+text-align:center;
+margin-top:15px;
+padding:20px;
+border-radius:12px;
+background:#55e69a0d;
+border:1px solid #55e69a33
+}
+
+.successBox h3{
+font-size:18px;
+color:#55e69a
+}
+
+.successBox p{
+font-size:10px;
+color:#8e9aad;
+margin-top:8px;
+line-height:1.7
+}
+
 .note{
 text-align:center;
 color:#667388;
@@ -330,7 +401,9 @@ text-align:center;
 padding:35px 5px
 }
 
-.thanks h3{font-size:15px}
+.thanks h3{
+font-size:15px
+}
 
 .thanks p{
 color:#707d90;
@@ -347,30 +420,54 @@ font-size:8px
 }
 
 @media(max-width:650px){
-.packages{grid-template-columns:repeat(2,1fr)}
-.features{grid-template-columns:1fr}
-.hero h1{font-size:28px}
+
+.packages{
+grid-template-columns:
+repeat(2,1fr)
 }
+
+.features{
+grid-template-columns:1fr
+}
+
+.hero h1{
+font-size:28px
+}
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
+
 <div class="wrap nav">
 
 <div class="logo">
 PISI <span>DIAMOND SHOP</span>
 </div>
 
-<a class="tg" href="https://t.me/" target="_blank">
+<a
+class="tg"
+href="https://t.me/"
+target="_blank">
+
 Telegram
+
 </a>
 
 </div>
+
 </header>
 
+
 <main class="wrap">
+
 
 <section class="hero">
 
@@ -379,8 +476,13 @@ PREMIUM MLBB DIAMOND SHOP
 </div>
 
 <h1>
-<span>Pisi Diamond Shop</span><br>
+
+<span>Pisi Diamond Shop</span>
+
+<br>
+
 မှ ကြိုဆိုပါတယ်ရှင့်
+
 </h1>
 
 <p>
@@ -394,54 +496,95 @@ MLBB Diamond များကို လွယ်ကူမြန်ဆန်စွ
 
 </section>
 
+
 <section class="features">
 
 <div class="feature">
+
 ⚡<br>
+
 <b>Fast Service</b>
-<p>မြန်ဆန်စွာ ဆောင်ရွက်ပေးပါတယ်</p>
+
+<p>
+မြန်ဆန်စွာ ဆောင်ရွက်ပေးပါတယ်
+</p>
+
 </div>
 
+
 <div class="feature">
+
 🔒<br>
+
 <b>Secure Order</b>
-<p>Order ကို သေချာစွာ စီမံပေးပါတယ်</p>
+
+<p>
+Order ကို သေချာစွာ စီမံပေးပါတယ်
+</p>
+
 </div>
 
+
 <div class="feature">
+
 💎<br>
+
 <b>Easy Top Up</b>
-<p>လွယ်ကူစွာ Order တင်နိုင်ပါတယ်</p>
+
+<p>
+လွယ်ကူစွာ Order တင်နိုင်ပါတယ်
+</p>
+
 </div>
 
 </section>
+
 
 <section>
 
 <div class="title">
-<h2>💎 Diamond Packages</h2>
-<p>ဝယ်ယူလိုသော Package ကို ရွေးပါ</p>
+
+<h2>
+💎 Diamond Packages
+</h2>
+
+<p>
+ဝယ်ယူလိုသော Package ကို ရွေးပါ
+</p>
+
 </div>
 
-<div class="packages" id="packages"></div>
+<div
+class="packages"
+id="packages">
+</div>
 
 </section>
 
-<section class="order" id="order">
+
+<section
+class="order"
+id="order">
 
 <div class="box">
 
-<h2>💎 Order တင်ရန်</h2>
+<h2>
+💎 Order တင်ရန်
+</h2>
 
 <p class="sub">
 အချက်အလက်များကို မှန်ကန်စွာ ဖြည့်ပေးပါရှင့်
 </p>
 
+
 <form id="orderForm">
+
 
 <div class="field">
 
-<label>👤 Player ID</label>
+<label>
+👤 Player ID
+</label>
 
 <input
 type="text"
@@ -451,9 +594,12 @@ required>
 
 </div>
 
+
 <div class="field">
 
-<label>🌐 Server ID</label>
+<label>
+🌐 Server ID
+</label>
 
 <input
 type="text"
@@ -462,6 +608,7 @@ placeholder="ဥပမာ - 1234"
 required>
 
 </div>
+
 
 <button
 type="button"
@@ -473,6 +620,7 @@ onclick="checkPlayer()">
 
 </button>
 
+
 <div
 class="playerInfo"
 id="playerInfo">
@@ -482,14 +630,18 @@ id="playerInfo">
 
 </div>
 
+
 <div
 class="status"
 id="playerStatus">
 </div>
 
+
 <div class="field">
 
-<label>💎 Diamond Package</label>
+<label>
+💎 Diamond Package
+</label>
 
 <input
 type="text"
@@ -500,18 +652,25 @@ required>
 
 </div>
 
+
 <div class="field">
 
-<label>💳 ငွေလွှဲရန် KPay</label>
+<label>
+💳 ငွေလွှဲရန် KPay
+</label>
 
 <div class="kpay">
 
 <div>
-<b>💳 KPay</b>
+
+<b>
+💳 KPay
+</b>
 
 <span id="kpayNumber">
 09969636983
 </span>
+
 </div>
 
 <button
@@ -527,6 +686,7 @@ Copy
 
 </div>
 
+
 <div class="field">
 
 <label>
@@ -541,6 +701,7 @@ required>
 
 </div>
 
+
 <button
 type="submit"
 class="submit"
@@ -551,25 +712,56 @@ disabled>
 
 </button>
 
+
 <div
 class="status"
 id="status">
 </div>
 
-<div class="wait">
-⏱️ Order ပြီးနောက် Wait 1min - 15min
+
+<div
+class="successBox"
+id="successBox">
+
+<h3>
+🎉 အောင်မြင်ပါပြီရှင့်
+</h3>
+
+<p>
+Diamond Top Up ပြီးပါပြီ။<br>
+Pisi Diamond Shop ကို အားပေးတဲ့အတွက်
+ကျေးဇူးအများကြီးတင်ပါတယ်ရှင့် 💎
+</p>
+
 </div>
 
+
+<div
+class="wait"
+id="waitBox">
+
+⏱️ Order တင်ပြီးနောက်
+1 မိနစ်မှ 15 မိနစ်ခန့်
+စောင့်ဆိုင်းပေးပါရှင့် 💗
+
+</div>
+
+
 <p class="note">
+
 KPay သို့ ငွေလွှဲပြီး Screenshot တင်ပေးပါ။<br>
+
 Player ID နှင့် Server ID ကို မှန်ကန်စွာ စစ်ပေးပါ။
+
 </p>
+
 
 </form>
 
 </div>
 
 </section>
+
 
 <section class="thanks">
 
@@ -584,17 +776,23 @@ Customer များအား အထူးကျေးဇူးတင်ပါ�
 
 </section>
 
+
 </main>
 
+
 <footer>
+
 © 2026 Pisi Diamond Shop
+
 </footer>
+
 
 <script>
 
-/* =========================
-   BACKEND URL
-========================= */
+
+// =========================
+// BACKEND
+// =========================
 
 const BACKEND_URL =
 "https://mlbb-shop-backend.onrender.com";
@@ -606,11 +804,12 @@ const CHECK_PLAYER_URL =
 BACKEND_URL + "/check-player";
 
 
-/* =========================
-   DIAMOND PACKAGES
-========================= */
+// =========================
+// PACKAGES
+// =========================
 
 const packages=[
+
 ["55","3,800"],
 ["86","5,700"],
 ["110","7,300"],
@@ -632,12 +831,18 @@ const packages=[
 ["6471","336,000"],
 ["8628","447,000"],
 ["10785","555,000"]
+
 ];
 
-const packageBox =
-document.getElementById("packages");
 
-packages.forEach((p,i)=>{
+const packageBox =
+document.getElementById(
+"packages"
+);
+
+
+packages.forEach(
+(p,i)=>{
 
 let tag="";
 
@@ -650,7 +855,8 @@ tag='<span class="tag">BEST</span>';
 if(i===15)
 tag='<span class="tag">VIP</span>';
 
-packageBox.innerHTML+=`
+
+packageBox.innerHTML += `
 
 <div class="package">
 
@@ -680,51 +886,65 @@ onclick="choosePackage('${p[0]} Diamonds - ${p[1]} Ks')">
 });
 
 
-/* =========================
-   SELECT PACKAGE
-========================= */
+// =========================
+// SELECT PACKAGE
+// =========================
 
 function choosePackage(name){
 
-document.getElementById("package").value=name;
+document.getElementById(
+"package"
+).value = name;
 
-document
-.getElementById("order")
-.scrollIntoView({
+document.getElementById(
+"order"
+).scrollIntoView({
 behavior:"smooth"
 });
 
 }
 
 
-/* =========================
-   CHECK PLAYER
-========================= */
+// =========================
+// CHECK PLAYER
+// =========================
 
 async function checkPlayer(){
 
 const playerId =
-document.getElementById("player_id")
-.value.trim();
+document.getElementById(
+"player_id"
+).value.trim();
 
 const serverId =
-document.getElementById("server_id")
-.value.trim();
+document.getElementById(
+"server_id"
+).value.trim();
 
 const button =
-document.getElementById("checkPlayerBtn");
+document.getElementById(
+"checkPlayerBtn"
+);
 
 const status =
-document.getElementById("playerStatus");
+document.getElementById(
+"playerStatus"
+);
 
 const playerInfo =
-document.getElementById("playerInfo");
+document.getElementById(
+"playerInfo"
+);
 
 const playerName =
-document.getElementById("playerName");
+document.getElementById(
+"playerName"
+);
 
 const submitBtn =
-document.getElementById("submitBtn");
+document.getElementById(
+"submitBtn"
+);
 
 
 if(!playerId){
@@ -753,7 +973,7 @@ return;
 }
 
 
-button.disabled=true;
+button.disabled = true;
 
 button.textContent =
 "⏳ Account စစ်နေပါတယ်...";
@@ -767,7 +987,7 @@ status.style.color =
 playerInfo.style.display =
 "none";
 
-submitBtn.disabled=true;
+submitBtn.disabled = true;
 
 
 try{
@@ -800,7 +1020,10 @@ const result =
 await response.json();
 
 
-if(response.ok && result.success){
+if(
+response.ok &&
+result.success
+){
 
 playerName.textContent =
 result.name || "Unknown";
@@ -814,15 +1037,12 @@ status.textContent =
 status.style.color =
 "#55e69a";
 
-submitBtn.disabled=false;
+submitBtn.disabled = false;
 
 submitBtn.textContent =
 "💎 Order တင်မည်";
 
 }else{
-
-playerInfo.style.display =
-"none";
 
 status.textContent =
 "❌ " +
@@ -834,7 +1054,7 @@ result.message ||
 status.style.color =
 "#ff6b81";
 
-submitBtn.disabled=true;
+submitBtn.disabled = true;
 
 }
 
@@ -848,12 +1068,12 @@ status.textContent =
 status.style.color =
 "#ff6b81";
 
-submitBtn.disabled=true;
+submitBtn.disabled = true;
 
 }
 
 
-button.disabled=false;
+button.disabled = false;
 
 button.textContent =
 "🔍 Account စစ်မည်";
@@ -861,19 +1081,22 @@ button.textContent =
 }
 
 
-/* =========================
-   COPY KPAY
-========================= */
+// =========================
+// COPY KPAY
+// =========================
 
 function copyKPay(){
 
 const number =
-document
-.getElementById("kpayNumber")
-.textContent
-.trim();
+document.getElementById(
+"kpayNumber"
+).textContent.trim();
 
-navigator.clipboard.writeText(number);
+
+navigator.clipboard.writeText(
+number
+);
+
 
 alert(
 "KPay ဖုန်းနံပါတ် Copy လုပ်ပြီးပါပြီ ✅"
@@ -882,48 +1105,156 @@ alert(
 }
 
 
-/* =========================
-   ORDER
-========================= */
+// =========================
+// CHECK ORDER STATUS
+// =========================
 
-document
-.getElementById("orderForm")
-.addEventListener(
+let statusTimer = null;
+
+
+async function checkOrderStatus(
+orderId
+){
+
+try{
+
+const response =
+await fetch(
+
+BACKEND_URL +
+"/order-status/" +
+orderId
+
+);
+
+
+const result =
+await response.json();
+
+
+if(
+response.ok &&
+result.success
+){
+
+if(
+result.status === "done"
+){
+
+clearInterval(
+statusTimer
+);
+
+showSuccess();
+
+}
+
+}
+
+}catch(error){
+
+console.log(
+"Status check error:",
+error
+);
+
+}
+
+}
+
+
+// =========================
+// SHOW SUCCESS
+// =========================
+
+function showSuccess(){
+
+const status =
+document.getElementById(
+"status"
+);
+
+const successBox =
+document.getElementById(
+"successBox"
+);
+
+const waitBox =
+document.getElementById(
+"waitBox"
+);
+
+
+status.textContent = "";
+
+successBox.style.display =
+"block";
+
+waitBox.style.display =
+"none";
+
+
+window.scrollTo({
+
+top:
+successBox.getBoundingClientRect().top +
+window.scrollY -
+120,
+
+behavior:"smooth"
+
+});
+
+}
+
+
+// =========================
+// ORDER
+// =========================
+
+document.getElementById(
+"orderForm"
+).addEventListener(
 "submit",
 async function(e){
 
 e.preventDefault();
 
+
 const playerId =
-document
-.getElementById("player_id")
-.value
-.trim();
+document.getElementById(
+"player_id"
+).value.trim();
 
 const serverId =
-document
-.getElementById("server_id")
-.value
-.trim();
+document.getElementById(
+"server_id"
+).value.trim();
 
 const packageName =
-document
-.getElementById("package")
-.value
-.trim();
+document.getElementById(
+"package"
+).value.trim();
 
 const screenshot =
-document
-.getElementById("payment_screenshot")
-.files[0];
+document.getElementById(
+"payment_screenshot"
+).files[0];
 
 const status =
-document
-.getElementById("status");
+document.getElementById(
+"status"
+);
 
 const button =
-document
-.getElementById("submitBtn");
+document.getElementById(
+"submitBtn"
+);
+
+const waitBox =
+document.getElementById(
+"waitBox"
+);
 
 
 if(!playerId){
@@ -978,10 +1309,9 @@ return;
 }
 
 
-/* FORM DATA */
-
 const data =
 new FormData();
+
 
 data.append(
 "player_id",
@@ -1009,15 +1339,13 @@ screenshot
 );
 
 
-/* SEND */
-
-button.disabled=true;
+button.disabled = true;
 
 button.textContent =
 "⏳ Order ပို့နေပါတယ်...";
 
 status.textContent =
-"ခဏစောင့်ပေးပါရှင့်...";
+"Order ပို့နေပါတယ်ရှင့်...";
 
 status.style.color =
 "#4ccaff";
@@ -1039,30 +1367,65 @@ const result =
 await response.json();
 
 
-if(response.ok && result.success){
+if(
+response.ok &&
+result.success
+){
 
 status.textContent =
-"✅ Order ပို့ပြီးပါပြီရှင့် 💎";
+"✅ Order လက်ခံပြီးပါပြီရှင့်";
 
 status.style.color =
 "#55e69a";
 
-document
-.getElementById("orderForm")
-.reset();
 
-document
-.getElementById("playerInfo")
-.style.display="none";
+waitBox.innerHTML = `
 
-document
-.getElementById("playerStatus")
-.textContent="";
+⏱️ <b>Order လက်ခံပြီးပါပြီရှင့် 🎉</b>
 
-button.disabled=true;
+<br><br>
+
+💎 Diamond Top Up ဆောင်ရွက်နေပါတယ်။
+
+<br>
+
+1 မိနစ်မှ 15 မိနစ်ခန့်
+စောင့်ဆိုင်းပေးပါရှင့် 💗
+
+<br><br>
+
+🆔 Order ID:
+<b>${result.order_id}</b>
+
+`;
+
 
 button.textContent =
-"💎 Account စစ်ပြီးမှ Order တင်ပါ";
+"⏳ ဆောင်ရွက်နေပါတယ်...";
+
+
+/*
+IMPORTANT:
+Order တင်ပြီးနောက်
+Website က 5 seconds တိုင်း
+Status ကို စစ်မယ်
+*/
+
+statusTimer =
+setInterval(
+
+function(){
+
+checkOrderStatus(
+result.order_id
+);
+
+},
+
+5000
+
+);
+
 
 }else{
 
@@ -1076,6 +1439,11 @@ result.message ||
 status.style.color =
 "#ff6b81";
 
+button.disabled = false;
+
+button.textContent =
+"💎 Order တင်မည်";
+
 }
 
 }catch(error){
@@ -1088,25 +1456,18 @@ status.textContent =
 status.style.color =
 "#ff6b81";
 
-}
-
-
-if(
-document
-.getElementById("playerInfo")
-.style.display !== "none"
-){
-
-button.disabled=false;
-
-}
+button.disabled = false;
 
 button.textContent =
 "💎 Order တင်မည်";
+
+}
 
 });
 
 </script>
 
+
 </body>
-</html>
+
+   </html>
